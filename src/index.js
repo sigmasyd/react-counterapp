@@ -6,6 +6,6 @@ import './index.css';
 
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(<PrimeraApp saludo="Hola, soy Goku" />, divRoot);
+ReactDOM.render(<PrimeraApp />, divRoot);
 
 //console.log(divRoot);

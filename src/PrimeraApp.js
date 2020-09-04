@@ -1,14 +1,10 @@
 //import React, { Fragment } from 'react';
 import React from 'react';
 
-const PrimeraApp = ({ saludo = 'Hola mundo' }) => {
-  /*const saludo = {
-    nombre: 'Carlos',
-    edad: 38,
-  };*/ //[1, 2, 3]; //'Hola mundo const';
-  //console.log(props);
-  //const saludo = 'Hola mundo';
-
+const PrimeraApp = ({ saludo }) => {
+  if (!saludo) {
+    throw new Error('El saludo es necesario');
+  }
   return (
     <>
       <h1>{saludo}</h1>
@@ -17,5 +13,4 @@ const PrimeraApp = ({ saludo = 'Hola mundo' }) => {
     </>
   );
 };
-//<pre>{JSON.stringify(saludo, null, 3)}</pre>
 export default PrimeraApp;
