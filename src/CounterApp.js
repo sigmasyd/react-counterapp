@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const CounterApp = ({ value }) => {
-  const [counter, setCounter] = useState(0);
+const CounterApp = ({ value = 10 }) => {
+  const [counter, setCounter] = useState(value);
 
   //handleAdd
-  const handleAdd = () => {
-    //console.log(e);
-    setCounter(counter + 1);
-    //setCounter(  (c) => c + 1 );  // forma alterna en caso de no poder accesar a counter
-  };
+  const handleAdd = () => setCounter(counter + 1);
+
+  const handleReset = () => setCounter(value);
+
+  const handleSubs = () => setCounter(counter - 1);
+
   return (
     <>
       <h1>Counter App</h1>
       <h2>{counter}</h2>
       <button onClick={handleAdd}>+1</button>
+      <button onClick={handleReset}>Reset</button>
+      <button onClick={handleSubs}>-1</button>
     </>
   );
 };
