@@ -10,7 +10,7 @@ const PrimeraApp = ({ saludo, subtitulo }) => {
   }*/ // no es conveniente por memoria, como se hace ? proptypes
   return (
     <>
-      <h1>{saludo}</h1>
+      <h1>{saludo}!!!</h1>
       <p>{subtitulo}</p>
     </>
   );
