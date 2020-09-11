@@ -9,4 +9,10 @@ describe('Pruebas con promesas', () => {
       done();
     });
   });
+  test('debe de obtener un error si el heroe po id no existe', () => {
+    const id = 10;
+    getHeroeByIdAsync(id).catch((error) => {
+      expect(error).toBe('No se pudo encontrar el héroe');
+    });
+  });
 });
