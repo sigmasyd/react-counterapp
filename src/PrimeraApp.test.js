@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import '@testing-library/jest-dom';
 //import { render } from '@testing-library/react';
-import PrimeraApp from '../PrimeraApp';
+import PrimeraApp from './PrimeraApp';
 
 describe('Pruebas en <PrimeraApp />', () => {
   /*test('debe mostrar el mensaje "Hola, soy Goku"', () => {
